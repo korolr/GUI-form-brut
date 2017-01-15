@@ -1,8 +1,5 @@
 import gi
 
-
-
-
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -22,56 +19,36 @@ from gi.repository import Gtk
 
 class Handler:
 
-    def __init__(self):
+    def __init__(self, ):
         self.workDir = os.path.abspath(os.curdir)
-
         self.threads = []
-
         self.browsers = []
-
         self.target = builder.get_object("target_in").get_text()
-
         self.xPathLogin = builder.get_object("login_in_1").get_text()
-
         self.xPathPassword = builder.get_object("pass_in").get_text()
-
         self.xPathAcceptButton = builder.get_object("login_in").get_text()
-
         self.xPathSuccessAuth = builder.get_object("auth_in").get_text()
-
         self.xPathFailAuth = builder.get_object("login_in").get_text()
-
         self.selBrowserString = '*chrome'
-
         self.selFFProfile = 'ff_profile'
-
         self.usersFile = 'dict/users.txt'
-
         self.passwordsFile = 'dict/pwd.txt'
-
         self.resultFile = 'result.txt'
-
         self.brutThreads = 1
-
         self.rumpUpPeriod = self.brutThreads * 5
-
         self.timeout = 1
-
         self.randomCredentials = False
-
         self.randomGeneratorParameter = [100, 8, 1, 1, 1, 0, 0, 0]
-
 
     def onDeleteWindow(self, *args):
         Gtk.main_quit(*args)
 
-    def user_file(self, button):
+    def btn_start(self, button):
         self.Main()
 
-    def target_in(self, widget, event):
-    	text_a =  self.get_text()
-    	print(text_a)
-    	# Main()
+    def user_file(self, button):
+        pass
+
     def Main(self):
         """
         Multithread runner.
@@ -570,40 +547,6 @@ builder.connect_signals(Handler())
 
 window = builder.get_object("window1")
 window.show_all()
-target = builder.get_object("target_in").get_text()
-
-
-xPathLogin = builder.get_object("login_in_1").get_text()
-
-xPathPassword = builder.get_object("pass_in").get_text()
-
-xPathAcceptButton = builder.get_object("login_in").get_text()
-
-xPathSuccessAuth = builder.get_object("auth_in").get_text()
-
-xPathFailAuth = builder.get_object("login_in").get_text()
-
-selBrowserString = '*chrome'
-
-selFFProfile = 'ff_profile'
-
-
-usersFile = 'dict/users.txt'
-
-passwordsFile = 'dict/pwd.txt'
-
-resultFile = 'result.txt'
-
-brutThreads = 1
-
-rumpUpPeriod = brutThreads * 5
-
-timeout = 1
-
-randomCredentials = False
-
-
-randomGeneratorParameter = [100, 8, 1, 1, 1, 0, 0, 0]
 
 
 Gtk.main()
