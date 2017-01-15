@@ -16,6 +16,7 @@ import functools
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
+from gi.repository import Notify
 
 class Handler:
 
@@ -39,6 +40,10 @@ class Handler:
         self.timeout = 1
         self.randomCredentials = False
         self.randomGeneratorParameter = [100, 8, 1, 1, 1, 0, 0, 0]
+        self.fd = open('/home/korolr/Desktop/python/gui_test/result.txt', 'r')
+        self.xPathFailAuth = builder.get_object("Text").get_buffer().set_text(self.fd.read())
+        self.file_ch = builder.get_object("file_ch")
+        self.file_ch_id1 = builder.get_object("file_ch1")
 
     def onDeleteWindow(self, *args):
         Gtk.main_quit(*args)
@@ -47,7 +52,18 @@ class Handler:
         self.Main()
 
     def user_file(self, button):
-        pass
+        self.file_ch.show_all()
+
+    def user_pswd(self, button):
+        self.file_ch_id1.show_all()
+
+    def choose_btn(self, button):
+        self.usersFile = self.file_ch.get_filename()
+        self.file_ch.close()
+
+    def choose_btn1(self, button):
+        self.passwordsFile = self.file_ch_id1.get_filename()
+        self.file_ch_id1.close()
 
     def Main(self):
         """
@@ -547,6 +563,5 @@ builder.connect_signals(Handler())
 
 window = builder.get_object("window1")
 window.show_all()
-
 
 Gtk.main()

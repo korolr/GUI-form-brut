@@ -1,12 +1,1 @@
-
-12:33:17 25.09.2012 - Thread #0, Bruter finished check for
-users = ['admin', ..., ''], 5 items,
-passwords = ['', ..., 'user'], 4 items.
-Actual time worked: 0:00:00.386000
-Suitable credentials: {'admin': ''}
-
-12:34:28 25.09.2012 - Thread #1, Bruter finished check for
-users = ['admin', ..., ''], 5 items,
-passwords = ['guest', ..., 'qwerty'], 5 items.
-Actual time worked: 0:01:07.565000
-Bruter can't find suitable credentials.
+12:33:17 25.09.2012 - Thread #0, Bruter finished check f
