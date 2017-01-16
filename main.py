@@ -20,7 +20,7 @@ from gi.repository import Notify
 
 class Handler:
 
-    def __init__(self, ):
+    def __init__(self):
         self.workDir = os.path.abspath(os.curdir)
         self.threads = []
         self.browsers = []
@@ -40,7 +40,7 @@ class Handler:
         self.timeout = 1
         self.randomCredentials = False
         self.randomGeneratorParameter = [100, 8, 1, 1, 1, 0, 0, 0]
-        self.fd = open('/home/korolr/Desktop/python/gui_test/result.txt', 'r')
+        self.fd = open('result.txt', 'r')
         self.xPathFailAuth = builder.get_object("Text").get_buffer().set_text(self.fd.read())
         self.file_ch = builder.get_object("file_ch")
         self.file_ch_id1 = builder.get_object("file_ch1")
@@ -558,7 +558,7 @@ class Handler:
         return 0
 
 builder = Gtk.Builder()
-builder.add_from_file("/home/korolr/Desktop/python/gui_test/gui.glade")
+builder.add_from_file("gui.glade")
 builder.connect_signals(Handler())
 
 window = builder.get_object("window1")
