@@ -5,14 +5,14 @@ Brutforce web forms has never been so easy
 
 ----------
 
-![enter image description here](https://psv4.vk.me/c810221/u2000006365/docs/3ea91466ab78/file.gif?extra=7EMp2zuAFPZuegOzDD--U4i3pPev6y6TKEODO54bcBncA6aT2jovjuUzbl8MeXSAMifiQ7jQjfGqEIhzfPGE7kwddFBfXA7Cr38PcHGOljQMthUH81KZ4B83)
+![enter image description here](http://s8.hostingkartinok.com/uploads/images/2017/01/17d2d59991f78dc9ece63376531627b4.gif)
 How to use
 -------------
 
 
 > **Install:**
 
-> - sudo apt-get install python3-gi glade
+> - sudo apt-get install python3-gi
 > - pip3 install selenium
 > - python3 main.py
 
