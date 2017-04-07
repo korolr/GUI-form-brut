@@ -6,13 +6,13 @@ Brutforce web forms has never been so easy
 ----------
 
 ![enter image description here](http://s8.hostingkartinok.com/uploads/images/2017/01/17d2d59991f78dc9ece63376531627b4.gif)
+
 How to use
 -------------
 
 
 > **Install:**
-
-> - sudo apt-get install python3-gi
+> - sudo pacman -S python-gobject
 > - pip3 install selenium
 > - python3 main.py
 
