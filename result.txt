@@ -1,1 +1,1 @@
-12:33:17 25.09.2012 - Thread #0, Bruter finished check f
+Result.txt
