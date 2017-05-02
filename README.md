@@ -7,8 +7,6 @@ Brutforce web forms has never been so easy
 
 ![gif](http://s8.hostingkartinok.com/uploads/images/2017/01/17d2d59991f78dc9ece63376531627b4.gif)
 
-How to use
--------------
 
 
 ## Quick start
